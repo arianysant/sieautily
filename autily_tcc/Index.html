@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Autily</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="img/logo redondo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+
+    <!-- Vendor CSS Files -->
+   <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
+   <link href="vendor/aos/aos.css" rel="stylesheet">
+   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+   <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+   <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+   <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <script src="menu.js" defer></script>
+</head>
+
+<style>
+/*  FONTE EXTERNA DAFONTE*/
+    @font-face {
+    font-family:'daddy';
+    src: url('fontes/DaddyCartoon.ttf') format('truetype');
+}
+
+.menu-desktop ul li a{
+    font-family: 'daddy';
+}
+</style>
+<title>Autily</title>
+</head>
+<body>
+    
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="img/favicon-96x96.png" alt="Logo Autily">
+                </a>
+            </div><!--logo-->
+
+            <nav class="menu-desktop">
+               <ul>
+                    <li><a href="Index.html">Início</a></li>
+                    <li><a href="Index.html#sobre">Sobre</a></li>
+                    <li><a href="Index.html#ia">IA</a></li>
+                    <li><a href="Index.html#prototipo">Prototipo</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="Index.html#sugestao">
+                    <button><p>Sugestão</p></button>
+                </a>
+            </div><!--btn-contato-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <!-- <nav>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Especialidades</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Projetos</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav> -->
+
+            </div><!--menu-mobile-->
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div><!--interface-->
+    </header>
+
+    <!-- Seção do Vídeo de Fundo -->
+    <section class="background-video-section">
+        <video autoplay muted loop class="background-video">
+            <source src="img/Design sem nome.mp4" type="video/mp4">
+            
+        </video>
+        <div class="content">
+           <p>
+        </div>
+    </section>
+    <main>
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>APLICATIVO <span>AUTILY</span>.</h1>
+                        <p>O Autily é um aplicativo que ajuda pais de crianças autistas no monitoramento e apoio ao desenvolvimento de seus filhos. Com uma interface intuitiva, permite registrar atividades, criar rotinas personalizadas e acessar uma comunidade de suporte, promovendo um ambiente seguro e compreensivo.</p>
+
+                        <div class="btn-contato">
+                            <a href="#">
+                                <button>Saiba Mais</button>
+                            </a>
+                        </div>
+                    </div><!--txt-topo-site-->
+
+                    <div class="img-topo-site">
+                        <img src="img/logo redondo.png" alt="">
+                    </div><!--img-topo-site-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--topo-do-site-->
+
+
+
+        <section class="especiliadades">
+            <div class="interface">
+                <section id="sobre">
+                <h2 class="titulo">SOBRE O <span> AUTISMO.</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="bi bi-arrow-right-square-fill"></i>
+                        <h3>Você sabia que o autismo tem diferentes níveis?</h3>
+                        <p>
+
+                        </p>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-1-circle-fill"></i>
+                        <h3>Autismo 
+                            <p>Leve.</p></h3>
+                        <p>Este é o mais brando e é caracterizado por dificuldades na interação social e comunicação, bem como comportamentos repetitivos e interesses restritos.</p>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box">
+                      <i class="bi bi-2-circle-fill"></i>
+                      <h3>Autismo Moderado.</h3>
+                      <p>Este segundo nível do TEA é considerado moderado e se caracteriza por dificuldades significativas na comunicação e interação social.</p>
+                  </div><!--especialidades-box-->
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-3-circle-fill"></i>
+                        <h3>Autismo Severo.</h3>
+                        <p>Além de apresentarem as características já descritas nos níveis 1 e 2, este também é caracterizado por dificuldades significativas de comportamentos repetitivos.</p>
+                    </div><!--especialidades-box-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--especiliadades-->
+
+
+        <section class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="img/poderdoautismo.png" alt="">
+                    </div><!--img-sobre-->
+
+                    <div class="txt-sobre">
+                        <section id="ia">
+                        <h2>MUITO PRAZER, <span>SOU A IA DO AUTILY.</span></h2>
+                        <p>Em um mundo cada vez mais conectado e digital, a eficiência e a personalização são fundamentais para o sucesso de qualquer aplicativo. É aqui que a inteligência artificial (IA) do nosso site Autily se destaca, oferecendo uma experiência única e intuitiva para os usuários.</p>
+                        <p>A IA do Autily é projetada para entender as necessidades individuais dos usuários, fornecendo instruções e assistência personalizadas. Isso não só melhora a experiência do usuário, mas também garante que eles possam aproveitar ao máximo as funcionalidades do aplicativo.</p>
+                    </div><!--txt-sobre-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--sobre-->
+
+        <section class="portfolio">
+            <div class="interface">
+                <section id="prototipo">
+                <h2 class="titulo">PROTÓTIPO DO <span>APP.</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(img/protipo02.png);">
+                        <div class="overlay">Tela Splash</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(img/portfolio02.png);">
+                        <div class="overlay">Tela de Login</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(img/03.png);">
+                        <div class="overlay">Tela de Perfil</div>
+                    </div>
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--portfolio-->
+
+
+        <div>
+
+    <section class="formulario">
+            <div class="interface">
+                <section id="sugestao">
+                <h2 class="titulo">DEIXE SUA <span>SUGESTÃO!</span></h2>
+
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Seu nome completo:" required>
+                    <input type="text" name="" id="" placeholder="Seu e-mail:" required>
+                    <input type="text" name="" id="" placeholder="Seu celular:">
+                    <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                </form>
+            </div><!--interface-->
+        <!--formulario-->
+
+    
+        <!-- Seção do Vídeo -->
+        <div class="video-section">
+            <h2>Vídeo</h2>
+            <video autoplay muted loop width="600">
+                <source src="img/video app.mp4" type="video/mp4">
+                <code>video</code>.
+            </video>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="img/favicon-96x96.png" alt="Logotipo Autily">
+                    </div><!--logo-footer-->
+                    <div class="btn-social">
+                        <a href="https://www.instagram.com/_autily/"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="#"><button><i class="bi bi-youtube"></i></button></a>
+                        <a href="#"><button><i class="bi bi-twitter-x"></i></button></a>
+                    </div><!--btn-social-->
+                </div>
+            </div><!--line-footer-->
+
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-at-fill"></i> <a href="autilyy@gmail.com">autilyy@gmail.com</a></p>
+            </div><!--line-footer-->
+        </div><!--interface-->
+    </footer>
+<!-- Vlibras -->
+  
+<section id="Vlibras">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+  </section>
+ </body>
+</html>
