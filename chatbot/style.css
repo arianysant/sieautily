@@ -19,18 +19,20 @@ body {
     height: 60px;
     border: none;
     border-radius: 50%;
-    background: linear-gradient(135deg, #4CAF50, #45a049);
+    background: rgba(76, 175, 80, 0.8);
     color: white;
     font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 .float-button:hover {
-    background: linear-gradient(135deg, #45a049, #4CAF50);
+    background: rgba(76, 175, 80, 1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* Janela do Chat */
@@ -40,26 +42,27 @@ body {
     right: 20px;
     width: 350px;
     max-height: 500px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s;
 }
 
-.hidden {
-    display: none;
+.chatbox:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .chat-header {
-    background: linear-gradient(135deg, #4CAF50, #45a049);
+    background: rgba(76, 175, 80, 0.9);
     color: white;
     padding: 10px;
     display: flex;
     align-items: center;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     position: relative;
 }
 
@@ -79,17 +82,66 @@ body {
     color: white;
     font-size: 24px;
     cursor: pointer;
+    transition: color 0.3s;
 }
 
 .close-button:hover {
     color: #f1f1f1;
 }
 
+/* Mensagens */
 .messages {
     flex: 1;
     padding: 10px;
     overflow-y: auto;
-    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Balão de mensagem */
+.message {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px 0;
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Balão de mensagem do usuário */
+.message.user {
+    align-self: flex-end;
+    background: #d4edda;
+}
+
+/* Balão de mensagem do assistente */
+.message.assistant {
+    align-self: flex-start;
+    background: #f1f1f1;
+}
+
+/* Triângulo do balão de mensagem */
+.message::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+}
+
+.message.user::after {
+    right: -20px;
+    top: 10px;
+    border-left-color: #d4edda;
+    border-width: 10px 10px 10px 0;
+}
+
+.message.assistant::after {
+    left: -20px;
+    top: 10px;
+    border-right-color: #f1f1f1;
+    border-width: 10px 0 10px 10px;
 }
 
 .options {
@@ -100,15 +152,18 @@ button.option {
     display: block;
     width: 100%;
     border: none;
-    background: linear-gradient(135deg, #4CAF50, #45a049);
-    color: white;
+    background: rgba(76, 175, 80, 0.2);
+    color: #333;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 30px;
     cursor: pointer;
     margin: 5px 0;
     font-size: 16px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 button.option:hover {
-    background: linear-gradient(135deg, #45a049, #4CAF50);
+    background: rgba(76, 175, 80, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }

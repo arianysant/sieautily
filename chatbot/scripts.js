@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mensagens e opções predefinidas
     const responses = {
         "inicial": [
-            { text: "Olá! Como posso ajudar você hoje?", options: ["Informações sobre nossos serviços", "Suporte técnico", "Falar com um atendente"] }
+            { text: "Oi! Como posso te ajudar?", options: ["Duvidas sobre o APP", "Suporte ", "Falar com um atendente"] }
         ],
         "serviços": [
-            { text: "Aqui estão alguns dos nossos serviços:", options: ["Consultoria", "Suporte técnico", "Desenvolvimento de software"] }
+            { text: "Qual a sua dúvida?:", options: ["xxxx", "Suporte técnico", "Desenvolvimento "] }
         ],
         "suporte": [
             { text: "Qual tipo de suporte você precisa?", options: ["Problemas com o software", "Problemas com hardware"] }
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para mostrar mensagem e opções
     function showResponse(responseKey) {
         const response = responses[responseKey][0];
-        addMessage('Chatbot: ' + response.text);
+        addMessage('MIA: ' + response.text, 'assistant');
 
         // Limpa opções anteriores
         options.innerHTML = '';
@@ -54,24 +54,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Adiciona uma mensagem ao chat
-    function addMessage(message) {
+    function addMessage(message, sender) {
         const messageElement = document.createElement('div');
+        messageElement.className = 'message ' + sender; // Adiciona a classe do balão de mensagem
         messageElement.textContent = message;
         messages.appendChild(messageElement);
-        messages.scrollTop = messages.scrollHeight;
+        messages.scrollTop = messages.scrollHeight; // Auto-scroll para o fim
     }
 
     // Lida com a opção selecionada
     function handleOption(option) {
-        addMessage('Você: ' + option);
-        if (option === "Informações sobre nossos serviços") {
+        addMessage('Você: ' + option, 'user');
+        if (option === "Duvidas sobre o APP") {
             showResponse('serviços');
-        } else if (option === "Suporte técnico") {
+        } else if (option === "Suporte ") {
             showResponse('suporte');
         } else if (option === "Falar com um atendente") {
             showResponse('atendente');
         } else {
-            addMessage('Chatbot: Desculpe, não entendi a sua opção.');
+            addMessage(' Desculpe, não entendi a sua opção.', 'assistant');
         }
     }
 
