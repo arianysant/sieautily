@@ -19,7 +19,7 @@ body {
     height: 60px;
     border: none;
     border-radius: 50%;
-    background: rgba(76, 175, 80, 0.8);
+    background: #65B7F6;
     color: white;
     font-size: 24px;
     display: flex;
@@ -31,7 +31,7 @@ body {
 }
 
 .float-button:hover {
-    background: rgba(76, 175, 80, 1);
+    background: #65B7F6;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 .chat-header {
-    background: rgba(76, 175, 80, 0.9);
+    background: #65B7F6;
     color: white;
     padding: 10px;
     display: flex;
@@ -112,13 +112,13 @@ body {
 /* Balão de mensagem do usuário */
 .message.user {
     align-self: flex-end;
-    background: #d4edda;
+    background: #75bef7c4;
 }
 
 /* Balão de mensagem do assistente */
 .message.assistant {
     align-self: flex-start;
-    background: #f1f1f1;
+    background: #d6d5d5;
 }
 
 /* Triângulo do balão de mensagem */
@@ -152,7 +152,7 @@ button.option {
     display: block;
     width: 100%;
     border: none;
-    background: rgba(76, 175, 80, 0.2);
+    background: #63b2eec4;
     color: #333;
     padding: 10px;
     border-radius: 30px;
@@ -164,6 +164,6 @@ button.option {
 }
 
 button.option:hover {
-    background: rgba(76, 175, 80, 0.3);
+    background: #75bef7c4;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }

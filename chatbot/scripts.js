@@ -8,11 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mensagens e opções predefinidas
     const responses = {
         "inicial": [
-            { text: "Oi! Como posso te ajudar?", options: ["Duvidas sobre o APP", "Suporte ", "Falar com um atendente"] }
+            { text: "Oi, Como posso te ajudar?", options: ["Sobre o APP", "Sobre o Site do APP", "Dúvidas Frequentes(FAQ)"] }
         ],
-        "serviços": [
-            { text: "Qual a sua dúvida?:", options: ["xxxx", "Suporte técnico", "Desenvolvimento "] }
+        "Ajuda sobre o APP": [
+            { text: "Qual é a sua dúvida?", options: ["Sobre a minha conta", "Sobre ", "Desenvolvimento "] }
         ],
+        "Site": [
+            { text: "Qual é a sua dúvida?", options: ["Como posso encontrar?", "Desenvolvedores"] }
+        ],
+        "local": [
+            { text: "Pesquise em seu navegador,  autily.com.br"}
+        ],
+        "desenvolvedores": [
+            { text: "Nossos desenvolvedores são 5 alunos da ETEC de Ribeirão Pires, que colocaram essa ideia em prática no ano de 2024."}
+        ],
+
+        "Conta":[
+            {text: "Qual o problema?", options: ["Como edito minhas informações de perfil?", ]}
+        ],
+
         "suporte": [
             { text: "Qual tipo de suporte você precisa?", options: ["Problemas com o software", "Problemas com hardware"] }
         ],
@@ -36,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para mostrar mensagem e opções
     function showResponse(responseKey) {
         const response = responses[responseKey][0];
-        addMessage('MIA: ' + response.text, 'assistant');
+        addMessage(' ' + response.text, 'assistant');
 
         // Limpa opções anteriores
         options.innerHTML = '';
@@ -64,12 +78,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lida com a opção selecionada
     function handleOption(option) {
-        addMessage('Você: ' + option, 'user');
-        if (option === "Duvidas sobre o APP") {
-            showResponse('serviços');
-        } else if (option === "Suporte ") {
+        addMessage(option, 'user');
+        // Sobre o APP
+        if (option === "Sobre o APP") {
+            showResponse('Ajuda sobre o APP');
+        } 
+        // Sobre o SITE
+        else if (option === "Sobre o Site do APP") {
+            showResponse('Site');
+        } 
+         // Local
+         else if (option === "Como posso encontrar?") {
+            showResponse('local');
+        } 
+         // Desenvolvedores
+         else if (option === "Desenvolvedores") {
+            showResponse('desenvolvedores');
+        } 
+        // Sobre a conta
+        else if (option === "Sobre a minha conta") {
+            showResponse('Conta');
+        } 
+        else if (option === "Suporte ") {
             showResponse('suporte');
-        } else if (option === "Falar com um atendente") {
+        } 
+        else if (option === "Falar com um atendente") {
             showResponse('atendente');
         } else {
             addMessage(' Desculpe, não entendi a sua opção.', 'assistant');
