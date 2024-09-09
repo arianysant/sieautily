@@ -477,117 +477,112 @@ video {
  
 }
 
-
-footer{
+footer {
   background-color: #65B7F6;
-  padding: 50px 0;
+  padding:  0; /* Ajusta o padding para reduzir a altura da parte azul */
 }
-.container-footer{
-  max-width: 1400px;
-  padding: 0 4%;
-  margin: auto;
+
+
+.footerContainer {
+  width: 100%;
+ 
+  text-align: center; /* Centraliza o conteúdo */
 }
-.row-footer{
+
+.footerimg {
+  max-width: 600px; /* Define um tamanho menor para a imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  margin: 0 auto 20px auto; /* Centraliza a imagem e adiciona espaço abaixo dela */
+  display: block; /* Garante que a imagem seja tratada como um bloco para centralização */
+  
+}
+
+.socialIcons {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.footer-col{
-  width: 25%;
-  padding: 0 15px;
-}
-.footer-col h4{
-  font-size: 22px;
-  color: white;
-  margin-bottom: 20px;
-  font-weight: 500;
-  position: relative;
-  text-transform: uppercase;
-}
-.footer-col ul{
-  list-style: none;
-}
-.footer-col ul li{
-  margin: 10px 0;
-}
-.footer-col ul li a{
-  font-size: 16px;
-  text-transform: capitalize;
-  color: white;
-  text-decoration: none;
-  font-weight: 300;
-  display: block;
-  transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-  color: #cecdcd;
-  padding-left: 10px;
-}
-.footer-col .medias-socias{
-  margin-top: 30px;
-}
-.footer-col .medias-socias a{
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
-  height: 40px;
-  width: 40px;
-  margin: 0 10px 10px 0;
+  margin-bottom: 30px; /* Espaço entre os ícones sociais e a navegação */
+}
+
+.socialIcons a {
   text-decoration: none;
-  border-radius: 50%;
-  color: white;
-  border: 1px solid white;
-  transition: all 0.5s ease;
-}
-.footer-col .medias-socias a i{
-  font-size: 20px;
-}
-
-.footer-col .medias-socias a:hover{
-  color: #65B7F6;
-  background-color: white;
-}
-.footer-col .form-sub input{
-  width: 100%;
   padding: 10px;
-  font-size: 15px;
-  outline: none;
-  border: 1px solid white;
-  color: white;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.socialIcons a i {
+  font-size: 2em;
+  color: #65B7F6;
+  opacity: 0.9;
+}
+
+/* Hover effect on social media icon */
+.socialIcons a:hover {
   background-color: #65B7F6;
+  transition: 0.5s;
 }
 
-.form-sub input,
-.form-sub textarea {
-    width: 100%;
-    background-color: #65B7F6;
-    border: 1px solid white;
-    outline: none;
-    padding: 10px;
-    border-radius: 15px;
-    color: #fff;
-    font-size: 15px;
-}
-
-.form-sub textarea {
-  resize: none;
-  max-height: 200px;
-}
-.footer-col .form-sub input::placeholder{
+.socialIcons a:hover i {
   color: white;
+  transition: 0.5s;
 }
-.footer-col .form-sub button{
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px; 
-  font-size: 17px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  color:#65B7F6;
-  border-radius: 3px;
-  font-weight: bold;
-  background-color: white;        
+
+.footerNav {
+  margin: 30px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footerNav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+}
+
+.footerBottom {
+  background-color: hsl(280, 9%, 94%);
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: #65B7F6;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+
+@media (max-width: 700px){
+  .footerNav ul{
+      flex-direction: column;
+  } 
+  .footerNav ul li{
+      width:100%;
+      text-align: center;
+      margin: 10px;
+  }
+  .socialIcons a{
+      padding: 8px;
+      margin: 4px;
+  }
 }
 /* Responsivo */
 @media (max-width: 800px) {
